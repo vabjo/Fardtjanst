@@ -1,0 +1,6 @@
+#ignore font and image folders during dev
+font/
+img/
+icons/
+
+/styles.css

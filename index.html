@@ -4,37 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--
     <link rel="stylesheet" href="styles.css">
-    -->
 
-    <!--GOOGLE FONT IMPORT-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--FONT IMPORT-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://use.typekit.net/qhu1gjd.css">
     
     <title>Färdtjänsten Malmö</title>
 </head>
 
 <body>
     <header>
-        <!--LOGOTYP
-        OBS! SKÅNETRAFIKEN SOM PLACEHOLDER-->
+        <!--LOGOTYP-->
         <a href="/">
-            <img class="logotyp" src="Assets/img/Skanetrafiken_logo_RGB.png" alt="">
+            <img class="logotyp" src="Assets/img/fardtjansten-malmo-logotyp.webp" alt="">
         </a>
         <!--NAVIGERING-->
         <nav>
             <ul>
-                <li>
+                <li class="index-link">
                     <a href="/">Hem</a>
                 </li>
                 
-                <li>
+                <li class="about-link">
                     <a href="pages/om-fardtjansten.html">Om färdtjänsten</a>
                 </li>
                 
-                <li class="mina-sidor">
+                <li class="mina-sidor-link">
                     <a href="pages/mina-sidor.html">Mina Sidor</a>
                 </li>
             </ul>
@@ -65,87 +61,67 @@
                 </div>
 
                 <!--Övrig information till föraren-->
-                <label for="info-kommentar">Övrig information till föraren, eventuella upphämtningsanvisningar, eller ändringar angående anpassningar och hjälpmedel noterade i <a href="/pages/mina-sidor.html">mina sidor</a>:</label>
-                <textarea name="info-kommentar" id="info-kommentar"></textarea>
+                <div class="info-kommentar">
+                    <label for="info-kommentar">Övrig information till föraren, eventuella upphämtningsanvisningar, eller ändringar angående anpassningar och hjälpmedel noterade i <a href="/pages/mina-sidor.html">mina sidor</a>:</label>
+                    <textarea name="info-kommentar" id="info-kommentar"></textarea>
+                </div>
 
                 <!--Submit knapp: Vid bokad resa, flagga och visa länk till mina sidor -> bokade resor-->
-                <button type="submit" class="primary-btn">Boka resa</button> 
+                <button class="boka-btn" type="submit">Boka resa</button> 
                 <!--Visa lista med sparade resor, valbara-->
-                <button type="button" class="primary-btn">Se sparade resor</button>
+                <button class="sparade-btn" type="button">Se sparade resor</button>
             </form>
         </section>
 
+        <!--Andra sektion: Information boxar som leder till info-undersidan-->
         <section class="info-index">
             <h2>Information</h2>
-            <article class="index-anvandning">
-                <h3>Hur gör jag?</h3>
-                <p>Du bokar din resa här på första sidan: ange adressen där du vill bli upphämtad och dit du ska resa, samt datum och tid för avfärd. Du kan se dina resor på <a href="pages/mina-sidor.html">mina sidor</a>, där du kan även boka om tidigare resor och anpassa dina sparade samt återkommande resor.</p>
-                <button>Läs vidare</button>
-            </article>
-            
-            <article class="index-omfardtjansten">
-                <h3>Vad är färdtjänst?</h3>
-                <p>Om du har ett funktionshinder som påverkar din förmåga att resa på egen hand, och är varaktigt i minst 3 månader, kan du söka tillstånd för färdtjänst. Vid beviljat tillstånd kan du som Malmöbo boka färdtjänstresor inom Malmö och dess grannkommuner.</p>
-                <button>Läs vidare</button>
-            </article>
-
-            <article class="index-ansokan">
-                <h3>Hur ansöker jag?</h3>
-                <p>Du ansöker om tillstånd till färdtjänst digitalt via 1177.se. Där behöver du logga in med e-legitimation och lägga till "Skånetrafiken Malmö" som mottagning. Din ansökan hanteras av en handläggare hos Region Skåne.</p>
-                <button>Läs vidare</button>
-            </article>
-        </section>
-
-        <!--
-        <section>
-            <article class="bokade-resor">
-                <h2>Bokade resor:</h2>
-                <article class="bokad-resa-dark">
-                    <h3 class="bokning-datum">[insert datum]</h3>
-                    <h4 class="bokning-tid">[insert tid]</h4>
-                    <div class="bokning-destination">
-                        <h4 class="bokning-label-fran">Från:</h4>
-                        <p class="bokning-fran">[insert franDestination]</p>
-                        <h4 class="bokning-label-fran">Till:</h4>
-                        <p class="bokning-till">[insert tillDestination]</p>
-                    </div>
+            <div class="info-index-content">
+                <article class="index-anvandning">
+                    <h3>Hur gör jag?</h3>
+                    <p>Du bokar din resa här på första sidan: ange adressen där du vill bli upphämtad och dit du ska resa, samt datum och tid för avfärd. Du kan se dina resor på <a href="pages/mina-sidor.html">mina sidor</a>, där du kan även boka om tidigare resor och anpassa dina sparade samt återkommande resor.</p>
+                    <button>Läs vidare</button>
                 </article>
-
-                <article class="bokad-resa-ljus">
                 
-                </article>
-            </article>
-
-            <article class="tidigare resor">
-                <h2>Tidigare resor:</h2>
-                <article class="tidigare-resa-dark">
-                    
+                <article class="index-omfardtjansten">
+                    <h3>Vad är färdtjänst?</h3>
+                    <p>Om du har ett funktionshinder som påverkar din förmåga att resa på egen hand, och är varaktigt i minst 3 månader, kan du söka tillstånd för färdtjänst. Vid beviljat tillstånd kan du som Malmöbo boka färdtjänstresor inom Malmö och dess grannkommuner.</p>
+                    <button>Läs vidare</button>
                 </article>
 
-                <article class="tidigare-resa-ljus">
-
-
+                <article class="index-ansokan">
+                    <h3>Hur ansöker jag?</h3>
+                    <p>Du ansöker om tillstånd till färdtjänst digitalt via 1177.se. Där behöver du logga in med e-legitimation och lägga till "Skånetrafiken Malmö" som mottagning. Din ansökan hanteras av en handläggare hos Region Skåne.</p>
+                    <button>Läs vidare</button>
                 </article>
-
-            </article>
+            </div>
         </section>
-    -->
     </main>
+
     <footer>
         <h3>Färdtjänsten Malmö</h3>
+
         <nav class="footer-nav">
             <ul>
-                <li>Kontakta oss</li>
-                <li>Tillgänglighetsredogörelse</li>
+                <li>
+                    <a href="">Kontakta oss</a>
+                </li>
+                <li>
+                    <a href="">Tillgänglighetsredogörelse</a>
+                </li>
             </ul>
         </nav>
-        <p>Färdtjänsten Malmö är en del av Skånetrafiken i samarbete med Region Skåne, och har skapats på uppdrag av Malmö Stad. För närvarande omfattar tjänsten endast Malmö kommun och dess invånare.</p>
-        <!--Loggor-->
-        <img src="" alt="Skånetrafikens webbplats">
-        <img src="" alt="Region Skånes webbplats">
-        <img src="" alt="Malmö Stads Webbplats">
-
-        <a class="toppen-btn" href="/">Tillbaka till toppen</a>
+        
+        <p>Färdtjänsten Malmö är en del av Skånetrafiken i samarbete med Region Skåne, och har skapats på uppdrag av Malmö Stad. Just nu omfattar tjänsten endast Malmö kommun och dess invånare.</p>
+        
+        <!--
+        <Loggor
+        <div class="logotyper">
+            <img class="skanetrafiken-logo" src="Assets/img/Skanetrafiken_logo_RGB.svg" alt="Skånetrafikens webbplats">
+            <img class="regionskane-logo" src="Assets/img/regionskane-logotyp-fullfarg-cmyk-obestruket.svg" alt="Region Skånes webbplats">
+            <img class="malmostad-logo" src="Assets/img/Malmostad_logo2025_vertical_colour_RGB.svg" alt="Malmö Stads Webbplats">
+        </div>
+        -->
     </footer>
 </body>
 </html>
